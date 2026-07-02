@@ -19,9 +19,12 @@ export default async function DashboardPage() {
     totalPenarikan: 0,
     totalPinjaman: 0,
     recentActivities: [],
+<<<<<<< HEAD
     pengajuanPinjaman: null,
     produkTerbaru: [],
     riwayatPembelian: [],
+=======
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
   };
 
   let chartData = [];
@@ -93,7 +96,11 @@ export default async function DashboardPage() {
 
     chartData = await aggregateChartData();
   } else {
+<<<<<<< HEAD
     const [totalSimpanan, totalPinjaman, recentSimpanan, pengajuan, produk, pembelian] = await Promise.all([
+=======
+    const [totalSimpanan, totalPinjaman, recentSimpanan] = await Promise.all([
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
       prisma.simpanan.aggregate({
         where: { anggota_id: user.id },
         _sum: { jumlah: true },
@@ -108,6 +115,7 @@ export default async function DashboardPage() {
         orderBy: { tgl: "desc" },
         select: { id: true, anggota_id: true, jumlah: true, tgl: true },
       }),
+<<<<<<< HEAD
       prisma.pengajuan_pinjaman.findFirst({
         where: { anggota_id: user.id },
         orderBy: { tanggal: "desc" },
@@ -123,13 +131,18 @@ export default async function DashboardPage() {
         orderBy: { tanggal_penjualan: "desc" },
         take: 3,
       })
+=======
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
     ]);
 
     stats.totalSimpanan = totalSimpanan._sum.jumlah || 0;
     stats.totalPinjaman = totalPinjaman._sum.jumlah || 0;
+<<<<<<< HEAD
     stats.pengajuanPinjaman = pengajuan;
     stats.produkTerbaru = produk;
     stats.riwayatPembelian = pembelian;
+=======
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
     stats.recentActivities = recentSimpanan.map((s) => ({
       id: s.id,
       title: "Setoran Tabungan",

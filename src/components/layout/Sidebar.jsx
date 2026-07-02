@@ -28,7 +28,10 @@ import {
   Printer,
   AlertCircle,
   PieChart,
+<<<<<<< HEAD
   Package,
+=======
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
 } from "lucide-react";
 
 const menuItems = [
@@ -59,8 +62,11 @@ const menuItems = [
       { name: "Pengguna", href: "/dashboard/config/pengguna", icon: UserCog },
       { name: "Anggota", href: "/dashboard/anggota", icon: Users },
       { name: "Informasi", href: "/dashboard/informasi", icon: Newspaper },
+<<<<<<< HEAD
       { name: "Kategori Produk", href: "/dashboard/master/kategori-produk", icon: Tag },
       { name: "Barang", href: "/dashboard/master/barang", icon: Layers },
+=======
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
     ],
   },
   {
@@ -73,6 +79,7 @@ const menuItems = [
       { name: "Pinjaman", href: "/dashboard/pinjaman", icon: CreditCard },
       { name: "Pembayaran", href: "/dashboard/transaksi/pembayaran", icon: BadgeCheck },
       { name: "Pengajuan Pinjaman", href: "/dashboard/transaksi/pengajuan-pinjaman", icon: FileSearch },
+<<<<<<< HEAD
       { name: "Penjualan", href: "/dashboard/penjualan", icon: Receipt },
     ],
   },
@@ -83,6 +90,12 @@ const menuItems = [
   { name: "Riwayat Pembelian", href: "/dashboard/riwayat-pembelian", icon: Receipt, roles: ["anggota"] },
   { name: "Informasi", href: "/dashboard/informasi", icon: Newspaper, roles: ["anggota"] },
   { name: "Profil Saya", href: "/dashboard/profile", icon: UserCog, roles: ["anggota"] },
+=======
+    ],
+  },
+  { name: "Simpanan", href: "/dashboard/simpanan", icon: Wallet, roles: ["anggota"] },
+  { name: "Pinjaman", href: "/dashboard/pinjaman", icon: CreditCard, roles: ["anggota"] },
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
   {
     name: "Laporan",
     icon: Printer,
@@ -95,7 +108,10 @@ const menuItems = [
       { name: "Pembayaran", href: "/dashboard/laporan/pembayaran", icon: BadgeCheck },
       { name: "Tunggakan", href: "/dashboard/laporan/tunggakan", icon: AlertCircle },
       { name: "SHU", href: "/dashboard/laporan/shu", icon: PieChart },
+<<<<<<< HEAD
       { name: "Penjualan", href: "/dashboard/laporan/penjualan", icon: Receipt },
+=======
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
     ],
   },
 ];

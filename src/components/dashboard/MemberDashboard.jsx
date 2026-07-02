@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Wallet, CreditCard, PieChart, Activity, ChevronRight, LayoutDashboard, Package, Receipt, FileSearch, Tag } from "lucide-react";
+=======
+import { Wallet, CreditCard, PieChart, Activity, ChevronRight, LayoutDashboard } from "lucide-react";
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
 import DashboardCharts from "@/components/dashboard/DashboardCharts";
 import Link from "next/link";
 
@@ -24,6 +28,7 @@ export default function MemberDashboard({ stats, chartData, user }) {
       icon: Activity,
       color: "text-emerald-600",
       bg: "bg-emerald-50"
+<<<<<<< HEAD
     },
     {
       title: "Status Pengajuan",
@@ -36,6 +41,11 @@ export default function MemberDashboard({ stats, chartData, user }) {
 
   const fmt = (n) => new Intl.NumberFormat("id-ID").format(n);
 
+=======
+    }
+  ];
+
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
   return (
     <div className="space-y-8 animate-in fade-in duration-500 pb-20">
 
@@ -57,7 +67,11 @@ export default function MemberDashboard({ stats, chartData, user }) {
       </div>
 
       {/* Stats Cards */}
+<<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+=======
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
         {cards.map((card, index) => (
           <div key={index} className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 group hover:shadow-md transition-all">
             <div className="flex items-center justify-between mb-4">
@@ -127,6 +141,7 @@ export default function MemberDashboard({ stats, chartData, user }) {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Produk & Pembelian */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
@@ -208,6 +223,8 @@ export default function MemberDashboard({ stats, chartData, user }) {
           </div>
         </div>
       </div>
+=======
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
     </div>
   );
 }

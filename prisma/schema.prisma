@@ -37,7 +37,10 @@ model anggota {
   email                  String?         @db.VarChar(255)
   reset_token            String?         @db.Text
   reset_token_expiration DateTime?       @db.DateTime(0)
+<<<<<<< HEAD
   penjualan              penjualan[]
+=======
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
 }
 
 /// Backup tabel — tidak dipakai aplikasi. Gunakan tabel `anggota`.
@@ -330,6 +333,7 @@ enum anggota_status {
   Aktif
   Keluar
 }
+<<<<<<< HEAD
 
 model kategori_produk {
   id            Int              @id @default(autoincrement())
@@ -394,3 +398,5 @@ model detail_penjualan {
   penjualan       penjualan      @relation(fields: [penjualan_id], references: [id])
   barang          master_barang  @relation(fields: [barang_id], references: [id])
 }
+=======
+>>>>>>> 8f98b2a1416b007336548dd1fca281f191450991
