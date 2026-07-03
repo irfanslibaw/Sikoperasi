@@ -2,7 +2,7 @@
 
 import prisma from "@/lib/prisma";
 import { setSession } from "@/lib/session";
-import { rateLimit } from "@/lib/rate-limit";
+import { rateLimit, resetRateLimit } from "@/lib/rate-limit";
 import { writeAuditLog, AUDIT_AKSI } from "@/lib/audit-log";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
@@ -88,6 +88,7 @@ export async function loginAction(prevState, formData) {
       username: role === "admin" ? user.username : user.nik,
       name: role === "admin" ? user.namalengkap : user.nama,
       role: role,
+      level_id: role === "admin" ? user.level_id : null,
     });
 
     // Audit: login berhasil
@@ -98,6 +99,8 @@ export async function loginAction(prevState, formData) {
       ipAddress: ip,
       keterangan: `Login sebagai ${role}`,
     });
+
+    resetRateLimit(`login:${ip}`);
 
     // Successful login
   } catch (e) {
